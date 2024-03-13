@@ -1,0 +1,42 @@
+@use "../styles/variables" as v;
+@use "../styles/mixin" as m;
+main {
+  .section1 {
+    padding-top: 20px;
+    text-align: center;
+    background-image: url(/images/background.png);
+    h2 {
+      color: v.$pink-color;
+      padding: 5% 0;
+    }
+    .card {
+      border: 4px solid v.$pastel-pink;
+      border-radius: 30px;
+      box-shadow: 1px 3px 1px #dbdbdb;
+    }
+    .card-container {
+      @include m.flexCenter;
+      flex-direction: column;
+
+      gap: 20px;
+
+      img {
+        width: 150px;
+      }
+    }
+    .btn {
+      margin-top: 20px;
+      width: 10rem;
+      background-color: v.$btn-color;
+    }
+  }
+}
+
+/*Responsive design*/
+@media (min-width: 700px) {
+  .section1 {
+    .card-container {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@use "../styles/variables" as v;
+header {
+  background-image: url(/images/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  position: relative;
+
+  h1 {
+    color: v.$yellow-color;
+    font-size: 8vw;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #000;
+  }
+
+  .logo-container {
+    padding: 10px 0 0 20px;
+    img {
+      width: 5vw;
+    }
+  }
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: v.$yellow-color;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 10px 0 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-box {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: v.$black-color;
+      padding: 0 20px;
+      font-size: 2vw;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: #fff;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        transition: 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+  }
+}
+
+/*Responsive design*/
+@media (min-width: 600px) {
+  header {
+    height: 28vw;
+    .nav-container {
+      display: block;
+    }
+    h1 {
+      font-size: vw;
+    }
+    .navbar {
+      display: none;
+    }
+  }
+}
