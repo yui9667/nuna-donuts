@@ -9,10 +9,11 @@ header {
 
   h1 {
     color: v.$yellow-color;
-    font-size: 8vw;
+    font-size: 10vw;
     text-align: center;
     font-weight: bold;
     -webkit-text-stroke: 1px #000;
+    padding-top: 20px;
   }
 
   .logo-container {
@@ -79,10 +80,10 @@ header {
   header {
     height: 28vw;
     .nav-container {
-      display: block;
+      display: flex;
     }
     h1 {
-      font-size: vw;
+      font-size: 8vw;
     }
     .navbar {
       display: none;
